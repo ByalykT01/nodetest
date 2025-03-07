@@ -1,0 +1,21 @@
+{
+  "name": "cicd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ByalykT01/NodeJS-deployment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ByalykT01/NodeJS-deployment/issues"
+  },
+  "homepage": "https://github.com/ByalykT01/NodeJS-deployment#readme"
+}
