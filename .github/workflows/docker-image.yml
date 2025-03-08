@@ -25,11 +25,11 @@ jobs:
         
       # Build Docker image with a specific tag (lowercase username)
       - name: Build Docker Image
-        run: docker build -t byalykt01/nodetest:latest .
+        run: docker build -t byalykt/nodetest:latest .
         
       # Push the built image to DockerHub
       - name: Push to DockerHub
-        run: docker push byalykt01/nodetest:latest
+        run: docker push byalykt/nodetest:latest
         
   # Deploy job
   Deploy:
@@ -41,7 +41,7 @@ jobs:
     steps:
       # Pull the latest Docker image from DockerHub
       - name: Pull the Docker Image
-        run: docker pull byalykt01/nodetest:latest
+        run: docker pull byalykt/nodetest:latest
         
       # Delete the old container if it exists
       - name: Delete Old Container
@@ -52,4 +52,4 @@ jobs:
           
       # Run a new container from the pulled image
       - name: Run the Container
-        run: docker run -d -p 80:80 --name rest-api-Container byalykt01/nodetest:latest
+        run: docker run -d -p 80:80 --name rest-api-Container byalykt/nodetest:latest
