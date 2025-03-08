@@ -52,4 +52,4 @@ jobs:
           
       # Run a new container from the pulled image
       - name: Run the Container
-        run: docker run -d -p 80:80 --name rest-api-Container byalykt/nodetest:latest
+        run: docker run -d -p 80:3000 --name rest-api-Container byalykt/nodetest:latest
