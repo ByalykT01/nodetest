@@ -6,7 +6,7 @@ on:
 permissions:
   contents: write
 jobs:
-  #Test job
+  # Test job
   Test:
     runs-on: ubuntu-latest
     steps:
@@ -14,14 +14,14 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Set up Node.js
-        uses: actions/checkout@v3
+        uses: actions/setup-node@v3
         with:
           node-version: '20'
           
       - name: Install dependencies
         run: npm ci
         
-      - name: run tests
+      - name: Run tests
         run: npm test
         
       - name: Generate test coverage
@@ -30,11 +30,8 @@ jobs:
   # Build job
   Build:
     needs: Test
-    # Use the latest Ubuntu runner
     runs-on: ubuntu-latest
-    # Steps to be executed in the Build job
     steps:
-      # Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
         
