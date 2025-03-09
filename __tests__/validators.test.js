@@ -1,4 +1,4 @@
-const { validateFormData } = require("../utils/validator");
+const { validateFormData } = require("../utils/validators");
 
 describe("Form Validation", () => {
   test("should validate valid form data", () => {
